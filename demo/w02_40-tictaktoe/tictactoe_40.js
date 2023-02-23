@@ -62,19 +62,26 @@ allLi.forEach( (item) => {
     item.addEventListener('click', () => {
         if(item.classList.contains('disabled') ) {
             alert('Already filled');
+            turn--;
         } else if(turn %2 === 0){
             item.textContent = 'O';
             item.classList.add('o', 'disabled');
             if(checkWin(o)){
-                winMessage(o);
                 done = true;
+                 winMessage(o);
+                setTimeout(() => {
+                    reset()
+                }, 1000);
             }
         } else if(turn %2 == 1){
             item.textContent = 'X';
             item.classList.add('x', 'disabled');
             if(checkWin(x)){
-                winMessage(x);
                 done = true;
+                winMessage(x);
+                setTimeout(() => {
+                    reset()
+                }, 1000);
             }
         }
 
