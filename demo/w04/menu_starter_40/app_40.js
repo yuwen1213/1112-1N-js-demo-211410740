@@ -81,8 +81,8 @@ const displayMenuItems = (menu) => {
     sectionCenter.innerHTML = displayMenu;
 }
 
-const categories = ['all', 'breakfast', 'lunch', 'dinner', 'shakes'];
-// const categories = ['all', ...new Set(menu.map((item) => item.category))];
+// const categories = ['all', 'breakfast', 'lunch', 'dinner', 'desert', 'shakes'];
+const categories = ['all', ...new Set(menu.map((item) => item.category))];
 
 const displayMenuButtons = () => {
     let menuButtons = categories.map((category) => {
