@@ -70,7 +70,7 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
   currentItem--;
   if(currentItem < 0 ) {
-    currentItem += 4;
+    currentItem += reviews.length;
   }
   // console.log('currentItem', reviews[currentItem])
   showReview(currentItem);
@@ -79,4 +79,4 @@ prevBtn.addEventListener('click', () => {
 randomBtn.addEventListener('click', () => {
   currentItem = Math.floor(Math.random() * reviews.length);
   showReview(currentItem);
-})
+});
