@@ -3,7 +3,6 @@ import { students, sdata } from './data_40.js';
 // for sdata
 
 console.log('sdata original', sdata);
-
 sdata.sort( function(a,b){return b-a});
 console.log(`The hightest score: ${sdata[0]}`);
 console.log(`The lowest score: ${sdata[sdata.length-1]}`);
@@ -31,12 +30,13 @@ const averageStudents = students.reduce( (total, student, index) => {
     console.log('index total', index, total);
     return total + student.score;
 }, 0) / students.length;
+
 console.log('average', averageStudents);
 
 console.log('sdata sorted', sdata);
-const averageSdata = sdata.reduce( (total, student, index) => {
+const averageSdata = sdata.reduce( (total, sdata, index) => {
     console.log('index total', index, total);
-    return ;
+    return total + sdata;
 }, 0) / sdata.length;
 console.log('average', averageSdata);
 
