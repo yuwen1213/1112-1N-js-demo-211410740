@@ -3,7 +3,7 @@ import { students, sdata } from './data_40.js';
 // for sdata
 
 console.log('sdata original', sdata);
-sdata.sort( function(a,b){return b-a});
+sdata.sort( function(a,b){return b-a});  //sort()排序 + compareFunction function(a,b) {return a-b}(小到大)
 console.log(`The hightest score: ${sdata[0]}`);
 console.log(`The lowest score: ${sdata[sdata.length-1]}`);
 
@@ -12,14 +12,14 @@ console.log(`The lowest score: ${sdata[sdata.length-1]}`);
 
 console.log('students', students); 
 
-const students2 = students.map((student) => {
+const students2 = students.map((student) => {  //map() 在陣列中新增陣列
     // student.role = 'student';
     return {...student, role: 'student'};
 });
 
 console.log('student2 original', students2)
 
-students2.sort(function(a,b){return a.score - b.score });
+students2.sort(function(a,b){return a.score - b.score }); //sort()排序 + compareFunction function(a,b) {return a-b}(小到大)
 console.log('students2 sorted', students2);
 
 console.log(`The lowest score: ${students2[0].score}`);
