@@ -5,10 +5,15 @@
 ### 已完成功能
 
 ![w40-p1.png](https://hlbovfzvhsftjuylmwlc.supabase.co/storage/v1/object/public/demo-40/md_1N_img/w40-p1.png)
+![w40-p6.png](https://hlbovfzvhsftjuylmwlc.supabase.co/storage/v1/object/public/demo-40/md_1N_img/w40-p6.png)
 
 ### md
 
 ![w40-p2.png](https://hlbovfzvhsftjuylmwlc.supabase.co/storage/v1/object/public/demo-40/md_1N_img/w40-p2.png)
+
+### Midprep Exam
+
+![w40-p7.png](https://hlbovfzvhsftjuylmwlc.supabase.co/storage/v1/object/public/demo-40/md_1N_img/w40-p7.png)
 
 ### 右上 icon
 
