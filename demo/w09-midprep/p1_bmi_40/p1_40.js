@@ -10,9 +10,9 @@ function bmiCalcResult_40(height, weight) {
     console.log(`For (h/w) = (${height}/${weight}), the BMI = ${bmi}`);
 }
 
-// bmiCalcResult_40(1.75, 55);
-// bmiCalcResult_40(1.75, 70);
-// bmiCalcResult_40(1.75, 85);
+bmiCalcResult_40(1.75, 55);
+bmiCalcResult_40(1.75, 70);
+bmiCalcResult_40(1.75, 85);
 
 function bmi_normal_low (height) {
     return 18.5 * height * height;
@@ -32,7 +32,6 @@ function bmiCalcSuggest_40(height, weight) {
     } else {
         let normal_high = bmi_normal_high(height);
         console.log(`For (h/w) = (${height}/${weight}), the BMI = ${bmi} which is ${(weight - normal_high).toFixed(2)} kg higher than normal`);
-
     }
 }
 

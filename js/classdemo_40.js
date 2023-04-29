@@ -60,3 +60,18 @@ const showClassDemo2 = (midprep) => {
             break;
     }
 }
+
+const showClassDemo3 = (mid) => {
+    const showDemo = document.querySelector('.banner-section');
+    switch(mid){
+        case 'P1':
+            showDemo.innerHTML = `<iframe src='./demo/w11/p1_40/p1_md_40.html' width="100%" height="100%" />`
+            break;
+        case 'P2':
+            showDemo.innerHTML = `<iframe src='./demo/w11/p2_40/p2_40.html' width="100%" height="100%" />`
+            break;
+        case 'P3':
+            showDemo.innerHTML = `<iframe src='./demo/w11/p3_40/p3_40.html' width="100%" height="100%" />`
+            break;
+    }
+  }

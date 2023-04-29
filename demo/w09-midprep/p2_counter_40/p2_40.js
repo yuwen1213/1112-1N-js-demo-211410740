@@ -17,9 +17,8 @@ btns.forEach(function (btn) {
     } else {
       count = 0;
     }
-
     if(count > 0) {
-      value.style.color = 'green';
+      value.style.color = 'green'; //變顏色
     } else if(count < 0) {
       value.style.color = 'red';
     } else {
