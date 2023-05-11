@@ -1,8 +1,11 @@
+const supabaseUrl = 'https://hlbovfzvhsftjuylmwlc.supabase.co'
+const supabase_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhsYm92Znp2aHNmdGp1eWxtd2xjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzc3NTM5NzUsImV4cCI6MTk5MzMyOTk3NX0.gkN77SdTD0KeC6BPohlI_HKOQWOivRMuqZp7TcpyEjE'
+
 const sectionCenter = document.querySelector('.section-center');//doucment裡面=>DOMC...
 const btnContainer = document.querySelector('.btn-container');
 
 // import { menu } from './data.js'
-const url = './api/data.json';
+const url = 'https://hlbovfzvhsftjuylmwlc.supabase.co/rest/v1/menu_40?select=*';
 
 let menu;
 
@@ -60,7 +63,13 @@ const displayMenuButton = () => {
 
 const fetchData = async () => {
     try{
-        const response = await fetch(url);
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                apiKey: `${supabase_key}`,
+                Authorization: `Bearer ${supabase_key}`,
+            }
+        });
         const data = response.json();
         console.log('fetch data',data );
         return data;
