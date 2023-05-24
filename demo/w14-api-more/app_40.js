@@ -15,7 +15,7 @@ try {
 const displayItems = (items) => {
   const displayData = items
     .map((item) => {
-      const { strEvent} = item;
+      const {strEvent} = item;
       return `<p>${strEvent}</p>`;
     })
     .join('');

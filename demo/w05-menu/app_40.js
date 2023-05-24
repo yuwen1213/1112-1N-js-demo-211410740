@@ -59,9 +59,6 @@ const displaycategoriesItems = (button) => {
     });
 }
 
-
-
-
 window.addEventListener('DOMContentLoaded', () => {
     displayMenuItems(menu);
     displaycategoriesItems(categories);
