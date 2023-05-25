@@ -2,7 +2,7 @@
 
 const url = './api/product.json'
 
-const pContainer = document.querySelector('products-container')
+const pContainer = document.querySelector('.products-container')
 
 let allProducts;
 let products;
@@ -19,12 +19,13 @@ const fetchData = async () => {
 }
 
 const displayProducts = (products) => {
-  let displayContent = products.map( (product) => {
-    const {company, name, price, image} = product.fields;
+  let displayContent = products.map( (product, index) => {
+    const {company, name, price} = product.fields;
+    let image = `./images/product-${index+1}.jpg`;
     return (`
           <div class="single-product">
             <img
-            src=${image[0].url}
+            src=${image}
             class="single-product-img img"
             alt="high-back bench"
             />
@@ -40,7 +41,6 @@ const displayProducts = (products) => {
   console.log('displayContent', displayContent);
   pContainer.innerHTML = displayContent;
 }
-
 
 window.addEventListener('DOMContentLoaded', async () => {
   allProducts = await fetchData();
