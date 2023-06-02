@@ -39,7 +39,7 @@ const displayProducts = (products) => {
     )
   }).join('');
 
-  // console.log('displayContent', displayContent);
+  console.log('displayContent', displayContent);
   pContainer.innerHTML = displayContent;
 }
 

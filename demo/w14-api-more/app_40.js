@@ -1,12 +1,12 @@
 const btn = document.querySelector('.btn');
 
 btn.addEventListener('click', async () => {
-  const url = 'https://www.thesportsdb.com/api/v1/json/3/eventsseason.php?id=4424&s=2019';
+  const url = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
 try {
 	const response = await fetch(url);
 	const data = await response.json();
-	console.log('data', data.events);
-  displayItems(data.events);
+	console.log('data', data.drinks);
+  displayItems(data.drinks);
 } catch (error) {
 	console.error(error);
 }
@@ -15,8 +15,8 @@ try {
 const displayItems = (items) => {
   const displayData = items
     .map((item) => {
-      const {strEvent} = item;
-      return `<p>${strEvent}</p>`;
+      const {strDrink} = item;
+      return `<p>${strDrink}</p>`;
     })
     .join('');
   const element = document.createElement('div');

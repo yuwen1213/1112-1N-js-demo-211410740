@@ -101,8 +101,8 @@
   .barimg {
     vertical-align: middle;
     float: left;
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
   }
 
       /*
@@ -441,7 +441,7 @@
   */
   
   .items {
-    padding: 5rem 0;
+    padding: rem 0;
     margin: auto;
   }
   
