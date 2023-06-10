@@ -105,6 +105,22 @@
     width: 50px;
   }
 
+/* search */
+
+  .fa-solid {
+    cursor: pointer; /*移過去有手*/
+    border-left: 0;
+}
+
+  .submit {
+    cursor: pointer; /*移過去有手*/
+}
+
+  input[type="text"] {
+    width: 130px;
+    border: 0 none;
+}
+
       /*
   =============== 
   left

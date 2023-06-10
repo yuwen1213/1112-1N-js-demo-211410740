@@ -44,34 +44,46 @@ const showClassDemo = (week) => {
       showDemo.innerHTML = `<iframe src='./demo/md/w07/w07_40.html' width="100%" height="100%" />`;
       break;
     case 'w11':
-      showDemo.innerHTML = `<iframe src='./demo/w06-array/p3_40/p3_40.html' width="100%" height="100%" />`;
+      showDemo.innerHTML = `<iframe src='./demo/w11/p3_40/p3_40.html' width="100%" height="100%" />`;
       break;
     case 'w11-md':
-      showDemo.innerHTML = `<iframe src='./demo/md/w07/w07_40.html' width="100%" height="100%" />`;
+      showDemo.innerHTML = `<iframe src='./demo/md/w11/w11_40.html' width="100%" height="100%" />`;
       break;
     case 'w12':
-      showDemo.innerHTML = `<iframe src='./demo/w06-array/p3_40/p3_40.html' width="100%" height="100%" />`;
+      showDemo.innerHTML = `<iframe src='./demo/w12/7-async-tutorials/index.html' width="100%" height="100%" />`;
       break;
     case 'w12-md':
-      showDemo.innerHTML = `<iframe src='./demo/md/w07/w07_40.html' width="100%" height="100%" />`;
+      showDemo.innerHTML = `<iframe src='./demo/md/w12/w12_40.html' width="100%" height="100%" />`;
       break;
     case 'w13':
-      showDemo.innerHTML = `<iframe src='./demo/w06-array/p3_40/p3_40.html' width="100%" height="100%" />`;
+      showDemo.innerHTML = `<iframe src='./demo/w13-menu-api/index.html' width="100%" height="100%" />`;
       break;
     case 'w13-md':
-      showDemo.innerHTML = `<iframe src='./demo/md/w07/w07_40.html' width="100%" height="100%" />`;
+      showDemo.innerHTML = `<iframe src='./demo/md/w13/w13_40.html' width="100%" height="100%" />`;
       break;
     case 'w14':
-      showDemo.innerHTML = `<iframe src='./demo/w06-array/p3_40/p3_40.html' width="100%" height="100%" />`;
+      showDemo.innerHTML = `<iframe src='./demo/w14_product/index.html' width="100%" height="100%" />`;
       break;
-    case 'w714-md':
-      showDemo.innerHTML = `<iframe src='./demo/md/w07/w07_40.html' width="100%" height="100%" />`;
+    case 'w14-md':
+      showDemo.innerHTML = `<iframe src='./demo/md/w14-product/w14_product.html' width="100%" height="100%" />`;
       break;
     case 'w15':
       showDemo.innerHTML = `<iframe src='./demo/w15-stoe-product/index.html' width="100%" height="100%" />`;
       break;
     case 'w15-md':
-      showDemo.innerHTML = `<iframe src='./demo/md/w15/index.html' width="100%" height="100%" />`;
+      showDemo.innerHTML = `<iframe src='./demo/md/w15/w15_40.html' width="100%" height="100%" />`;
+      break;
+    case 'w16':
+      showDemo.innerHTML = `<iframe src='./demo/w16-meal-finder/index.html' width="100%" height="100%" />`;
+      break;
+    case 'w16-md':
+      showDemo.innerHTML = `<iframe src='./demo/md/w16/w16_40.html' width="100%" height="100%" />`;
+      break;
+    case 'w17':
+      showDemo.innerHTML = `<iframe src='./demo/w17/index.html' width="100%" height="100%" />`;
+      break;
+    case 'w17-md':
+      showDemo.innerHTML = `<iframe src='./demo/md/w17/w17_40.html' width="100%" height="100%" />`;
       break;
   }
 };

@@ -4,6 +4,10 @@ const url = './api/product.json'
 
 const pContainer = document.querySelector('.item-center');
 const shopBtns = document.querySelectorAll('.btn-2');
+const search = document.querySelector('#search'); //id用#
+const submit = document.querySelector('#submit');
+const mealsEl = document.querySelector('#meals');
+
 
 
 // const為常數，須給定植、let為變數
@@ -12,15 +16,33 @@ let products; //篩選出來的product
 
 // fetchData非同步(async、await)、try成功 catch失敗後會被抓到
 const fetchData = async () => {
-    try{
-        const response = await fetch(url);
-        const data = response.json();
-        console.log('fetch data', data);
-        return data;
-    }catch(err){
-        console.log(err);
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log('fetch data', data);
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+const searchMeal = async (e) => {
+  e.preventDefault();
+  const term = search.value.trim();
+  if (term) {
+    if (!allProducts) {
+      allProducts = await fetchData();
     }
-} 
+
+    const filteredItems = allProducts.filter((product) =>
+      product.title.toLowerCase().includes(term.toLowerCase())
+    );
+
+    console.log('searched item', filteredItems);
+    displayItems(filteredItems);
+  }
+}
+
 
 const displayItems = (products) => {
     // 讀取陣列內容
@@ -74,3 +96,6 @@ window .addEventListener('DOMContentLoaded', async() => {
     console.log('all products', allProducts);
     await displayItems(allProducts);
 });
+
+//Event listeners
+submit.addEventListener('click', searchMeal);
