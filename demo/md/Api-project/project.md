@@ -2,7 +2,7 @@
 
 ### [Github Vercel](https://1112-1-n-js-demo-211410740.vercel.app/)
 
-### [Vercel api project URL](http://127.0.0.1:5502/demo/API-project/index.html)
+### [Vercel api project URL](http://127.0.0.1:5502/demo/API-project/p3/index.html)
 
 ### P1: get menu items from local json (product.json)
 
