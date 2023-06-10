@@ -72,17 +72,16 @@ shopBtns.forEach( (btn) => {
 });
 
 const searchMeal = async (e) => {
-  e.preventDefault();
-  const term = search.value.trim();
+  e.preventDefault(); //action 跳過要自己做
+  const term = search.value.trim();  //trim把前後空白拿掉
+    // console.log('term',term); 看有沒有抓到資料
   if (term) {
     if (!allProducts) {
       allProducts = await fetchData();
     }
-
     const filteredItems = allProducts.filter((product) =>
       product.title.toLowerCase().includes(term.toLowerCase())
     );
-
     console.log('searched item', filteredItems);
     displayItems(filteredItems);
   }

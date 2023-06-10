@@ -3,12 +3,6 @@
 const url = './product.json'
 
 const pContainer = document.querySelector('.item-center');
-const shopBtns = document.querySelectorAll('.btn-2');
-const search = document.querySelector('#search'); //id用#
-const submit = document.querySelector('#submit');
-const mealsEl = document.querySelector('#meals');
-
-
 
 // const為常數，須給定植、let為變數
 let allProducts;
@@ -55,44 +49,9 @@ const displayItems = (products) => {
     pContainer.innerHTML = displayContent;
 }
 
-shopBtns.forEach( (btn) => {
-  // 做按鈕監聽，e => 事件
-  btn.addEventListener('click', (e) => {
-    const shopId = e.currentTarget.dataset.id;
-    console.log('shopId', shopId);
-    if(shopId === 'all'){
-      console.log('all products', allProducts);
-      displayItems(allProducts);
-    }else {
-      products = allProducts.filter((p) => p.category.name === shopId);
-      console.log(`${shopId} products`, products);
-      displayItems(products);    
-    }
-  })
-});
-
-const searchMeal = async (e) => {
-  e.preventDefault();
-  const term = search.value.trim();
-  if (term) {
-    if (!allProducts) {
-      allProducts = await fetchData();
-    }
-
-    const filteredItems = allProducts.filter((product) =>
-      product.title.toLowerCase().includes(term.toLowerCase())
-    );
-
-    console.log('searched item', filteredItems);
-    displayItems(filteredItems);
-  }
-}
-
 window .addEventListener('DOMContentLoaded', async() => {
     allProducts = await fetchData();
     console.log('all products', allProducts);
     await displayItems(allProducts);
 });
 
-//Event listeners
-submit.addEventListener('click', searchMeal);

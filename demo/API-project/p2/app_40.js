@@ -71,23 +71,6 @@ shopBtns.forEach( (btn) => {
   })
 });
 
-const searchMeal = async (e) => {
-  e.preventDefault();
-  const term = search.value.trim();
-  if (term) {
-    if (!allProducts) {
-      allProducts = await fetchData();
-    }
-
-    const filteredItems = allProducts.filter((product) =>
-      product.title.toLowerCase().includes(term.toLowerCase())
-    );
-
-    console.log('searched item', filteredItems);
-    displayItems(filteredItems);
-  }
-}
-
 window .addEventListener('DOMContentLoaded', async() => {
     allProducts = await fetchData();
     console.log('all products', allProducts);

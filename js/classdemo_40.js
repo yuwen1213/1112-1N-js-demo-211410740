@@ -117,3 +117,24 @@ const showClassDemo3 = (mid) => {
       break;
   }
 };
+
+const showClassDemo4 = (final) => {
+  const showDemo = document.querySelector('.banner-section');
+  switch (final) {
+    case 'P1':
+      showDemo.innerHTML = `<iframe src='./demo/API-project/p1/index.html' width="100%" height="100%" />`;
+      break;
+    case 'P2':
+      showDemo.innerHTML = `<iframe src='./demo/API-project/p2/index.html' width="100%" height="100%" />`;
+      break;
+    case 'P3':
+      showDemo.innerHTML = `<iframe src='./demo/API-project/p3/index.html' width="100%" height="100%" />`;
+      break;
+    case 'md':
+      showDemo.innerHTML = `<iframe src='./demo/md/API-project/project_40.html' width="100%" height="100%" />`;
+      break;
+    case 'P4':
+      showDemo.innerHTML = `<iframe src='./demo/API-project/p4/portfolio/index.html' width="100%" height="100%" />`;
+      break;
+  }
+};
