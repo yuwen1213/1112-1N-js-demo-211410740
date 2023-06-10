@@ -131,7 +131,7 @@ const showClassDemo4 = (final) => {
       showDemo.innerHTML = `<iframe src='./demo/API-project/p3/index.html' width="100%" height="100%" />`;
       break;
     case 'md':
-      showDemo.innerHTML = `<iframe src='./demo/md/API-project/project_40.html' width="100%" height="100%" />`;
+      showDemo.innerHTML = `<iframe src='./demo/md/Api-project/project_40.html' width="100%" height="100%" />`;
       break;
     case 'P4':
       showDemo.innerHTML = `<iframe src='./demo/API-project/p4/portfolio/index.html' width="100%" height="100%" />`;
