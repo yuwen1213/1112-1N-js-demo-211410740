@@ -34,26 +34,32 @@ const displayMenuItems = (menu) => {
 
 const displayMenuButton = () => {
     const categories = ['all', ...new Set(menu.map((item) => item.category))];
-    let displayMenuButtons = categories.map((item) => {
-        return `<button type="button" class="filter-btn" data-id="${item}">${item}</button>`;
+    let displayMenuButton = button.map( (item) => {
+        return `
+        <button type="button" class="filter-btn" data-id="${item}">${item}</button>`
     });
-    displayMenuButtons = displayMenuButtons.join('');
-    btnContainer.innerHTML = displayMenuButtons;
+    // console.log('displayButtons before join', menuButtons);
+    menuButtons = menuButtons.join('');
+    // console.log('displayButtons after join\n', menuButtons);
+    btnContainer.innerHTML = menuButtons;
 
     const filterBtns = document.querySelectorAll('.filter-btn');
-    filterBtns.forEach((btn) => {
+    console.log('filterBtns', filterBtns);
+    filterBtns.forEach( (btn) => {
         btn.addEventListener('click', (e) => {
+            console.log('data-id', e.currentTarget.dataset.id);
             const category = e.currentTarget.dataset.id;
-            const filterMenu = menu.filter((item) => item.category === category);
-            if (category === 'all') {
+            const filterMenu = menu.filter( (item) => item.category === category);
+            if(category === 'all'){
+                console.log('all', menu)
                 displayMenuItems(menu);
-            } else {
-                displayMenuItems(filterMenu);
+            }else{
+                console.log(category, filterMenu);
+                displayMenuItems(filterMenu)
             }
         });
     });
 }
-
 
 const fetchData = async () => {
     try{
@@ -73,8 +79,7 @@ const fetchData = async () => {
 }
 
 window.addEventListener('DOMContentLoaded',async () => {
-    menu = await fetchData(url);
+    const menu = await fetchData(url);
     await displayMenuItems(menu);
     await displayMenuButton(menu);
-    
 });

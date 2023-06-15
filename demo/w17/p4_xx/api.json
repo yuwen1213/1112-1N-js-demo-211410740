@@ -1,0 +1,69 @@
+// 20230613142644
+// https://randomuser.me/api
+
+{
+    "results": [
+      {
+        "gender": "female",
+        "name": {
+          "title": "Miss",
+          "first": "پرنیا",
+          "last": "مرادی"
+        },
+        "location": {
+          "street": {
+            "number": 6938,
+            "name": "ستارخان"
+          },
+          "city": "اردبیل",
+          "state": "آذربایجان غربی",
+          "country": "Iran",
+          "postcode": 67793,
+          "coordinates": {
+            "latitude": "14.6361",
+            "longitude": "44.1295"
+          },
+          "timezone": {
+            "offset": "-3:00",
+            "description": "Brazil, Buenos Aires, Georgetown"
+          }
+        },
+        "email": "prny.mrdy@example.com",
+        "login": {
+          "uuid": "d945b510-a067-4f6a-b0da-aae4372796f4",
+          "username": "purplemouse668",
+          "password": "steve1",
+          "salt": "bAC0AMCc",
+          "md5": "1b773e6cbfcc78b54a353683a955a081",
+          "sha1": "a0832ccc9f52b6f0fb9459a34335ba0cf77913ba",
+          "sha256": "63bed03e6a8584742d881313797c020108845b30ce9abe486182cec4bb2691d4"
+        },
+        "dob": {
+          "date": "1997-02-03T03:53:11.507Z",
+          "age": 26
+        },
+        "registered": {
+          "date": "2008-07-04T08:18:23.141Z",
+          "age": 14
+        },
+        "phone": "041-45492400",
+        "cell": "0928-073-0316",
+        "id": {
+          "name": "",
+          "value": null
+        },
+        "picture": {
+          "large": "https://randomuser.me/api/portraits/women/19.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/women/19.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/women/19.jpg"
+        },
+        "nat": "IR"
+      }
+    ],
+    "info": {
+      "seed": "35f021cfe7bc9eac",
+      "results": 1,
+      "page": 1,
+      "version": "1.4"
+    }
+  }
